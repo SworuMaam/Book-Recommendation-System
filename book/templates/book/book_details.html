@@ -1,0 +1,12 @@
+<!-- book/templates/book/book_detail.html -->
+{% extends 'book/base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+    <h2 class="text-3xl font-bold mb-4">{{ book.title }}</h2>
+    <p class="text-lg mb-2">by {{ book.author }}</p>
+    <p class="mb-4">{{ book.description }}</p>
+    <!-- Add more details as needed -->
+    <a href="{% url 'home' %}" class="text-blue-600 hover:underline">Back to Home</a>
+{% endblock %}
